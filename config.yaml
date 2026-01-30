@@ -1,0 +1,16 @@
+# config.yaml — agent configuration & permissions
+mode: poc
+use_cloud_llm: false
+allow_admin_actions: false  # default: do not auto-elevate
+safety:
+  deny_patterns:
+    - delete
+    - rm -rf
+    - registry
+    - format
+  require_confirmation_for:
+    - wifi
+    - install
+    - uninstall
+    - registry
+    - file_write
